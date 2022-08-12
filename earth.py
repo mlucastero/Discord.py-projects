@@ -4,7 +4,7 @@ import random
 from discord import Permissions
 import asyncio
 
-token = "OTQxMzQwMTk0NTU1MTk5NTE4.GzgNK_.X7R0C0kmAl3FBYTcA8lHvk5dguPlrpBt1CUuEE"
+token = "Your TOKEN"
 #print(discord.__version__)
 invite_bot = "https://discord.com/api/oauth2/authorize?client_id=941340194555199518&permissions=8&scope=bot"
 

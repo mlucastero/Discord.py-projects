@@ -4,7 +4,7 @@ from random import randint
 from discord.ext import commands
 from discord import Permissions
 import os
-TOKEN = "OTQwMTMwOTQ1MDAzMDM2NzEz.GwkxW2.OmxUEfbc3dOo9hYXryppwuD5IvDUN00db8PQJA"
+TOKEN = "your_token"
 client = commands.Bot(command_prefix="g!", help_command=None)
 invite = "https://discord.com/api/oauth2/authorize?client_id=940130945003036713&permissions=8&scope=bot"
 

